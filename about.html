@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <link rel="icon" href="content/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" , lang="en" />
+    <title>Tile Basic - Easiest Tile Map Editor for Pygame </title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body class="tile-basic-org-bkgnd">
+    <div class="row">
+        <div class="tile-basic-org-menu">
+            <ul>
+                <li><a href="#point-1">Opening Program</a></li>
+                <li><a href="#point-2">Opening Tile Images</a></li>
+                <li><a href="#point-3">Tools and Map Editing</a></li>
+                <li><a href="#point-4">Saving Your Map</a></li>
+                <li><a href="#point-5">Using Your Tile Map Code</a></li>
+                <li><a href="#point-6">Opening Previous Projects</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="tile-basic-org-page">
+            <h1 class="tile-basic-org-title">About</h1>
+            <p class="tile-basic-org-para">Tile Basic is a simple tile editor for pygame game developers. It allows the user to visually create a 
+                tilemap that can then be exported as pygame code. The resulting code will create pygame code that will load the tilemap and draw it to the pygame screen.</p>
+            <h1 class="tile-basic-org-title" style = "font-size: 2.00em;">How to Use</h1>
+            <h1 class="tile-basic-org-title" style = "font-size: 1.50em" id="point-1">1. Opening Program</h1>
+            <image src="content/images/Step1.jpg" width="100%">Launch Program</image>
+            <p class="tile-basic-org-para">To launch the Python script, run TileEditor.pyw. You will be greeted by the following screen.</p>
+            <image src="content/images/Step2.jpg" width="100%">Startup Screen</image>
+            <p class="tile-basic-org-para">The box on the top left is the image box. It will hold the images for tiles to be used in your game's tile map. To the right, you 
+                will see a dark grey box with scrollbars around it and a light grey grid overlayed on it. This is the canvas where you will place your tiles to form a tilemap. 
+                On the bottom left you will see a box with two icons in it. One looks like a cursor outline, and the other looks like an eraser outline. The cursor icon 
+                represents the "draw" tool, and the eraser icon represents the "eraser" tool. These tools will be used to edit your tile map visually on the canvas.</p>
+            <h1 class="tile-basic-org-title" style = "font-size: 1.50em" id="point-2">2. Opening Tile Images</h1>
+            <p class="tile-basic-org-para">To get started go to the file menu and select "Open Image(s)" as shown below. If you are making a tilemap for a game, it is recommended that 
+                you first place all of your tile images in the directory you will be using for the images used in the game. This is because the tilemap editor will be remembering the 
+                images based on their path. So if you move one of the images later, the tilemap editor will not know how to find it.</p>
+            <image src="content/images/Step3.jpg" width="100%">Open Menu</image>
+            <p class="tile-basic-org-para">Once you select the "Open Image(s)" option, an Open File Dialog will appear. Select all of the images that you want to use as tiles as shown in the image below. Then 
+                click "Open".</p>
+            <image src="content/images/Step4.jpg" width="100%">Open Images</image>
+            <p class="tile-basic-org-para">The Selected images will be loaded into the image box as shown below. Click one of the tile icons to select it.</p>
+            <image src="content/images/Step5.jpg" width="100%">Load Images</image>
+            <h1 class="tile-basic-org-title" style="font-size: 1.50em;" id="point-3">3. Tools and Map Editing</h1>
+            <p class="tile-basic-org-para">Draw the tiles onto the Canvas as desired. Click and drag to draw multiple tiles. You are currently using the "draw" tool.</p>
+            <image src="content/images/Step6.jpg" width="100%">Draw Tool</image>
+            <p class="tile-basic-org-para">If you would like to erase any part of your tile map, select the eraser tool by clicking on its icon. Then click on the tile that you would like to erase. 
+                Click and drag to erase multiple tiles. You are currently using the "eraser" tool. If you would like to switch back to the "draw" tool to add more tiles to your map, click a tile icon 
+                in the image box, or click the "draw" tool icon.</p>
+            <image src="content/images/Step7.jpg" width="100%">Erase Tool</image>
+            <h1 class="tile-basic-org-title" style="font-size: 1.50em;" id="point-4">4. Saving Your Map</h1>
+            <p class="tile-basic-org-para">Once you are done editing your tilemap, go to the file menu and click "Save Map".</p>
+            <image src="content/images/Step9.jpg" width="100%">Save Map</image>
+            <p class="tile-basic-org-para">You will be confronted with a dialog box like the one shown below. It will ask you if you want to save only the section of your map containing tiles or if you 
+                would like to save the entire map (including empty rows). If you are going to use your tile map in your game immediately, it might be best to save the map without any empty rows as these 
+                might get in your way when you try to draw the map to your screen in your game. If, however, you want to save your map for later editing before you use it in your game, it is best to 
+                save the entire map with the empty rows.</p>
+            <image src="content/images/Step10.jpg" width="100%">Make Selection/image>
+            <p class="tile-basic-org-para">Choose a save location and name; then click "Save".</p>
+            <h1 class="tile-basic-org-title" style="font-size: 1.50em;" id="point-5">5. Using Your Tile Map Code</h1>
+            <p class="tile-basic-org-para">When you have saved your tile map, the code in the resulting python file should look something like this.</p>
+            <image src="content/images/ResultingCode.jpg" width="100%">Resulting Code</image>
+            <p class="tile-basic-org-para">To use the code in your game, first add the pygame base code.</p>
+            <image src="content/images/AddPygameBaseCode.jpg" width="100%">Add Pygame Base Code</image>
+            <p class="tile-basic-org-para">Next define an instance of the TileMap class including a tilesize number in the class definition. This number determines the size for each individual tile drawn 
+                to the screen in pixels. In this case, I'm using a size of 16 pixels</p>
+            <image src="content/images/AddClass.jpg" width="100%">Add TileMap Class</image>
+            <p class="tile-basic-org-para">Next run the drawMap() function in the game loop. Include the screen surface to draw to and the location of the tilemap in the function call. Make sure that you call 
+                the drawMap() function in the game loop after the code that clears the screen.</p>
+            <image src="content/images/DrawMap.jpg" width="100%">Add drawMap() Function</image>
+            <p class="tile-basic-org-para">If all goes well, you should see your tilemap drawn onto the pygame window.</p>
+            <image src="content/images/ResultDrawn.jpg" width="100%">Pygame Result</image>
+            <h1 class="tile-basic-org-title" style="font-size: 1.50em;" id="point-6">6. Opening Previous Projects</h1>
+            <p class="tile-basic-org-para">If you would like to reopen a previously saved project, go to the file menu and click "Open Map".</p>
+            <image src="content/images/Step12.jpg" width="100%">Open File Menu</image>
+            <p class="tile-basic-org-para">Navigate to the location of the saved file and open it.</p>
+            <image src="content/images/Step13.jpg" width="100%">Open File Dialog</image>
+            <p class="tile-basic-org-para">Your tile map will be loaded into the tile editor. You can now edit it and save it again with the new changes.</p>
+            <image src="content/images/Step14.jpg" width="100%">Opened File</image>
+        </div>
+    </div>
+    <div class="tile-basic-org-topbar">
+        <ul id="navbardd">
+            <li><a href = "index.html">Home</a></li>
+            <li style="float: right; padding: 5px;">
+                <div class="tile-basic-org-dropdown">
+                    <div class="tile-basic-org-dropdown-contents">
+                        <ul>
+                            <li><a href = "about.html">About</a></li>
+                            <li><a href = "download.html">Download</a></li>
+                        </ul>
+                    </div>
+                    <img src="content/images/Menu.png" />
+                </div></li>
+        </ul>
+        <ul id="navbarlist">
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "about.html">About</a></li>
+            <li><a href = "download.html">Download</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

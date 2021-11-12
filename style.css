@@ -1,0 +1,185 @@
+*{
+    box-sizing:border-box; /*Keeps content flow clean*/
+}
+:root { /*where we declare our constants*/
+    --darkseagreen: rgb(38, 115, 71);
+    --msgtransparent: rgba(60, 179, 113, 0.6);
+    --greytransparent: rgba(191, 191, 191, 0.6);
+    --darkgreytransparent: rgba(120, 120, 120, 0.6);
+    --dsgtransparent: rgba(38, 115, 71, 0.7);
+    --pagebg: rgba(60,60,60, 0.7);
+}
+video {
+    max-width: 90%;
+    height: auto;
+    float: left;
+}
+h1.tile-basic-org-title {
+    color: mediumseagreen;
+    font-size: 2.5em;
+}
+@media only screen and (min-width: 850px) {
+    h1.tile-basic-org-title {
+        color: mediumseagreen;
+        font-size: 3em;
+    }
+}
+p.tile-basic-org-para {
+    text-indent: 50px;
+    text-shadow: 5px 5px 10px black;
+    color: white;
+    font-size: 1.25em;
+}
+a.tile-basic-org-btnlnk:link, a.tile-basic-org-btnlnk:visited{
+    font-size: 1.25em;
+    color: white;
+    text-decoration:none;
+    background-color:seagreen;
+    padding: 10px;
+    border-radius:10px;
+}
+a.tile-basic-org-btnlnk:hover {
+    background-color: var(--darkseagreen);
+    color:lightgray;
+}
+a.tile-basic-org-btnlnk:active{
+    background-color:transparent;
+    color:black;
+    border: 2px solid var(--darkseagreen);
+}
+
+div.tile-basic-org-page {
+    background-color: var(--pagebg);
+    border-radius: 25px; /*makes rounded edges on page.*/
+    box-shadow: rgb(0,0,0,0.4) 10px 10px 10px; /*add extra pixel value to add blur.*/
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 50px;
+    width: 100%;
+    float: left;
+}
+
+@media only screen and (min-width: 850px){
+    div.tile-basic-org-page {
+        width: 50%;
+        margin: 100px;
+    }
+}
+body.tile-basic-org-bkgnd{
+    background-image: url("content/images/Background Loop.gif");
+    background-size: 65vw;
+    background-attachment:fixed;
+}
+ul.tile-basic-org-list {
+    background: var(--msgtransparent);
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 1.25em;
+    color: white;
+}
+.tile-basic-org-menu ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 100px;
+    background-color: var(--pagebg);
+    border-radius: 5px;
+    padding: 10px;
+}
+@media only screen and (min-width: 850px){
+    .tile-basic-org-menu ul {
+        width: 20%;
+        float: left;
+    }
+}
+
+.tile-basic-org-menu li a{
+    display: block;
+    background-color: var(--dsgtransparent);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 1.25em;
+}
+.tile-basic-org-menu li a:hover{
+    background-color: mediumseagreen;
+    cursor: pointer;
+}
+
+.tile-basic-org-topbar ul {
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    background: var(--dsgtransparent);
+}
+.tile-basic-org-topbar li {
+    float:left;
+}
+
+.tile-basic-org-topbar li a {
+display: block;
+color: white;
+text-decoration: none;
+padding: 20px 50px;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+font-size: 1.25em;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.tile-basic-org-topbar li a:hover {
+    background-color: mediumseagreen;
+}
+
+.tile-basic-org-table {
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 1.25em;
+    width: 100%;
+}
+.tile-basic-org-table td {
+    padding-left: 10px;
+}
+.tile-basic-org-table th {
+    background-color: var(--msgtransparent);
+}
+
+.tile-basic-org-dropdown-contents ul{
+    display: none;
+    list-style-type: none;
+    margin-top: 60px;
+    padding: 5px;
+    width: 100%;
+    background: var(--darkseagreen);
+}
+.tile-basic-org-dropdown:hover .tile-basic-org-dropdown-contents ul{
+    display: block;
+}
+.tile-basic-org-dropdown-contents li {
+    float:none;
+}
+#contents:nth-child(odd) {
+    background-color: var(--darkgreytransparent);
+}
+#contents:nth-child(even) {
+    background-color: var(--greytransparent);
+}
+#navbarlist{
+    display: none;
+}
+#navbardd{
+    display: block;
+}
+@media only screen and (min-width: 850px) {
+    #navbardd {
+        display: none
+    }
+    #navbarlist {
+        display: block;
+    }
+}
